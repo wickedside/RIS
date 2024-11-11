@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clients xmlns="http://www.mitso.com/spring/model"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.mitso.com/spring/model clients.xsd">
+    <client>
+        <surname>Иванов</surname>
+        <name>Иван</name>
+        <patronymic>Иванович</patronymic>
+        <dateOfBirth>1990-05-15</dateOfBirth>
+        <gender>true</gender>
+        <passportSeries>AB</passportSeries>
+        <passportNumber>123456</passportNumber>
+        <identificationNumber>987654321</identificationNumber>
+        <city>Минск</city>
+        <actualAddress>ул. Немига, д.1</actualAddress>
+        <homePhone>+375 (11) 123-45-67</homePhone>
+        <mobilePhone>+375 (44) 765-43-21</mobilePhone>
+        <registrationAddress>ул. Казинца, д.2</registrationAddress>
+        <citizenship>Беларусь</citizenship>
+    </client>
+</clients>

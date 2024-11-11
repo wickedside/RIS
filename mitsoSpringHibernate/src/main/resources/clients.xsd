@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.mitso.com/spring/model"
+           xmlns="http://www.mitso.com/spring/model"
+           elementFormDefault="qualified">
+
+    <xs:element name="clients">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="client" type="ClientType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="ClientType">
+        <xs:sequence>
+            <xs:element name="surname" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="patronymic" type="xs:string"/>
+            <xs:element name="dateOfBirth" type="xs:date"/>
+            <xs:element name="gender" type="xs:boolean"/>
+            <xs:element name="passportSeries" type="xs:string"/>
+            <xs:element name="passportNumber" type="xs:string"/>
+            <xs:element name="identificationNumber" type="xs:string" minOccurs="0"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="actualAddress" type="xs:string"/>
+            <xs:element name="homePhone" type="xs:string" minOccurs="0"/>
+            <xs:element name="mobilePhone" type="xs:string" minOccurs="0"/>
+            <xs:element name="registrationAddress" type="xs:string"/>
+            <xs:element name="citizenship" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Определение списков городов и гражданств -->
+    <xs:element name="cities">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="city" type="CityType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="CityType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="citizenships">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="citizenship" type="CitizenshipType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="CitizenshipType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
