@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Оформление аренды</title>
+    <style>
+        /* Базовые стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Навигационная панель */
+        .navbar {
+            background-color: #343a40;
+            padding: 1em;
+            color: #fff;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 1em;
+        }
+        /* Контейнер */
+        .container {
+            padding: 2em;
+        }
+        /* Таблица */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 0.75em;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin-right: 0.5em;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 0.25em;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+        /* Поля ввода */
+        .form-control {
+            width: 100%;
+            padding: 0.375em 0.75em;
+            margin-bottom: 1em;
+            box-sizing: border-box;
+        }
+        /* Флажки */
+        .form-check {
+            margin-bottom: 1em;
+        }
+        .form-check-label {
+            margin-left: 0.3em;
+        }
+    </style>
+    <script>
+        function updatePrice() {
+            const rentalType = document.getElementById('rentalType').value;
+            let price = 0;
+            let penalty = 0;
+            switch (rentalType) {
+                case '1_hour':
+                    price = 10.0;
+                    penalty = 10.0;
+                    break;
+                case '3_hours':
+                    price = 25.0;
+                    penalty = 8.0;
+                    break;
+                case '1_day':
+                    price = 50.0;
+                    penalty = 50.0;
+                    break;
+            }
+            document.getElementById('price').innerText = price + ' руб.';
+            document.getElementById('penalty').innerText = penalty + ' руб. за каждый час просрочки';
+        }
+    </script>
+</head>
+<body onload="updatePrice()">
+<!-- Навигационная панель -->
+<nav class="navbar">
+    <a th:href="@{/}">Bike Rental</a>
+    <a th:href="@{/admin/bikes}">Администрирование</a>
+</nav>
+
+<div class="container">
+    <h1>Оформление аренды для велосипеда [[${bike.model}]]</h1>
+    <!-- Условия договора -->
+    <div class="contract-terms">
+        <h2>Условия договора</h2>
+        <p>Пожалуйста, ознакомьтесь с условиями аренды перед подтверждением:</p>
+        <ul>
+            <li>Стоимость аренды: <span id="price"></span></li>
+            <li>Комиссия за просрочку: <span id="penalty"></span></li>
+            <li>Вы обязуетесь вернуть велосипед в установленный срок.</li>
+            <li>В случае повреждения велосипеда вы несете ответственность за ремонт.</li>
+        </ul>
+    </div>
+
+    <form th:action="@{/rent}" method="post">
+        <input type="hidden" name="bikeId" th:value="${bike.id}"/>
+
+        <label for="name">Имя клиента</label>
+        <input type="text" class="form-control" id="name" name="name" required/>
+
+        <label for="email">Email клиента</label>
+        <input type="email" class="form-control" id="email" name="email" required/>
+
+        <label for="rentalType">Тип аренды</label>
+        <select class="form-control" id="rentalType" name="rentalType" onchange="updatePrice()" required>
+            <option value="1_hour">1 час</option>
+            <option value="3_hours">3 часа</option>
+            <option value="1_day">1 день</option>
+        </select>
+
+        <!-- Подтверждение согласия с условиями -->
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="agree" required>
+            <label class="form-check-label" for="agree">Я согласен с условиями договора</label>
+        </div>
+
+        <button type="submit" class="btn">Оформить аренду</button>
+    </form>
+</div>
+</body>
+</html>
