@@ -1,0 +1,61 @@
+Создание Клиента (POST)
+URL: http://localhost:8080/rest/customers
+Method: POST
+Headers:
+Content-Type: application/json
+Body (JSON):
+{
+    "lastName": "Ковалев",
+    "firstName": "Сергей",
+    "middleName": "Николаевич",
+    "birthDate": "1980-04-15",
+    "gender": true,
+    "passportSeries": "AB",
+    "passportNumber": "6543210",
+    "identityNumber": "6543210F345PB6",
+    "city": "Могилев",
+    "actualAddress": "ул. Лермонтова, д.3",
+    "homePhone": "+375 (22) 456-78-90",
+    "mobilePhone": "+375 (29) 654-32-10",
+    "registrationAddress": "ул. Лермонтова, д.3",
+    "citizenship": "Республика Беларусь"
+}
+
+Получение Клиента по ID (GET)
+URL: http://localhost:8080/rest/customers/1
+Method: GET
+Headers:
+Accept: application/json
+
+Обновление Клиента (PUT)
+URL: http://localhost:8080/rest/customers/1
+Method: PUT
+Headers:
+Content-Type: application/json
+Body (JSON):
+{
+    "lastName": "Ковалев",
+    "firstName": "Сергей",
+    "middleName": "Николаевич",
+    "birthDate": "1980-04-15",
+    "gender": true,
+    "passportSeries": "AB",
+    "passportNumber": "6543210",
+    "identityNumber": "6543210F345PB6",
+    "city": "Могилев",
+    "actualAddress": "ул. Лермонтова, д.3",
+    "homePhone": "+375 (22) 456-78-90",
+    "mobilePhone": "+375 (29) 654-32-10",
+    "registrationAddress": "ул. Лермонтова, д.3",
+    "citizenship": "Республика Беларусь"
+}
+
+Удаление Клиента (DELETE)
+URL: http://localhost:8080/rest/customers/1
+Method: DELETE
+
+Получение Всех Клиентов (GET)
+URL: http://localhost:8080/rest/customers
+Method: GET
+Headers:
+Accept: application/json
