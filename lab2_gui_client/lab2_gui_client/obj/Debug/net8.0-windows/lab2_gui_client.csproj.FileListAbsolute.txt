@@ -1,0 +1,16 @@
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\lab2_gui_client.csproj.GenerateResource.cache
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\lab2_gui_client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\lab2_gui_client.AssemblyInfoInputs.cache
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\lab2_gui_client.AssemblyInfo.cs
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\lab2_gui_client.csproj.CoreCompileInputs.cache
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\bin\Debug\net8.0-windows\lab2_gui_client.exe
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\bin\Debug\net8.0-windows\lab2_gui_client.deps.json
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\bin\Debug\net8.0-windows\lab2_gui_client.runtimeconfig.json
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\bin\Debug\net8.0-windows\lab2_gui_client.dll
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\bin\Debug\net8.0-windows\lab2_gui_client.pdb
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\CandyClient.ClientForm.resources
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\lab2_gui_client.dll
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\refint\lab2_gui_client.dll
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\lab2_gui_client.pdb
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\lab2_gui_client.genruntimeconfig.cache
+C:\Users\awok3\source\repos\lab2_gui_client\lab2_gui_client\obj\Debug\net8.0-windows\ref\lab2_gui_client.dll
